@@ -1,0 +1,32 @@
+#minesweeper-wrap {
+	display: block;
+	position: relative;
+	width: 600px;
+	height: 650px;
+}
+.button {
+	border: none;
+	border-radius: 0;
+	margin: 0 8px 0 8px;
+	background-color: #88b34d;
+	outline: none;
+	color: white;
+	height: 100%;
+	width: 80px;
+	font-weight: bold;
+	font-size: 15px;
+}
+.button:focus {
+	outline: 3px solid #688c3a;
+}
+#button-wrap {
+	display: flex;
+	flex-direction: row;
+	height: 30px;
+	width: 300px;
+	position: absolute;
+	justify-content: center;
+	align-items: flex-end;
+	bottom: 10px;
+	right: 6px;
+}
