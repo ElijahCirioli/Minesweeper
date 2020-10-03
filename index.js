@@ -124,6 +124,16 @@ function drawBar() {
 	}
 }
 
+function drawWin() {
+	context.fillStyle = backgroundColor;
+	context.fillRect(0, canvas.height - controlsHeight, 130, 50);
+	context.textAlign = "left";
+	context.font = "bold 30px Arial";
+	context.fillStyle = "white";
+	context.font = "bold 26px Arial";
+	context.fillText("YOU WIN", 15, canvas.height - 16);
+}
+
 function gameOver() {
 	let m = mines[0];
 	let time = 15;
@@ -149,7 +159,8 @@ function checkWin() {
 	}
 	if (count === 0) {
 		clearInterval(thread);
-		alert("you win!");
+		drawWin();
+		state = 2;
 	}
 }
 
@@ -166,23 +177,23 @@ function inBounds(x, y) {
 	return x >= 0 && y >= 0 && x < numTiles && y < numTiles;
 }
 
-document.getElementById("easy-button").onclick = e => {
+document.getElementById("easy-button").onclick = (e) => {
 	numTiles = tileDifficulty[0];
 	numMines = mineDifficulty[0];
 	setup();
 };
-document.getElementById("medium-button").onclick = e => {
+document.getElementById("medium-button").onclick = (e) => {
 	numTiles = tileDifficulty[1];
 	numMines = mineDifficulty[1];
 	setup();
 };
-document.getElementById("hard-button").onclick = e => {
+document.getElementById("hard-button").onclick = (e) => {
 	numTiles = tileDifficulty[2];
 	numMines = mineDifficulty[2];
 	setup();
 };
 
-canvas.onmousedown = e => {
+canvas.onmousedown = (e) => {
 	e = e || window.event;
 
 	let rect = e.target.getBoundingClientRect();
@@ -217,7 +228,7 @@ canvas.onmousedown = e => {
 	}
 };
 
-document.oncontextmenu = e => {
+document.oncontextmenu = (e) => {
 	return false;
 };
 
