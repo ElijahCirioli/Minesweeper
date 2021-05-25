@@ -1,11 +1,13 @@
 body {
 	margin: 0 0 0 0;
+	overflow: hidden;
 }
 #minesweeper-wrap {
 	display: block;
 	position: relative;
 	width: 600px;
 	height: 650px;
+	overflow: hidden;
 }
 .button {
 	border: none;

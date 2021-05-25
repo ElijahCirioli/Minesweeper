@@ -76,7 +76,7 @@ class Cell {
 				flags--;
 				draw();
 				setTimeout(checkWin, 10);
-			} else {
+			} else if (this.flagged) {
 				this.flagged = false;
 				flags++;
 				draw();
