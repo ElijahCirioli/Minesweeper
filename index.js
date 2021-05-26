@@ -24,6 +24,7 @@ function setup() {
 	flags = numMines;
 
 	state = 0;
+	timeInit = new Date();
 	draw();
 }
 
