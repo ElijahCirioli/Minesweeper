@@ -18,6 +18,7 @@ let state, thread;
 let timeInit;
 
 function setup() {
+	clearInterval(thread);
 	ts = Math.floor(canvas.width / numTiles);
 	createMines(0, 0);
 	flags = numMines;
